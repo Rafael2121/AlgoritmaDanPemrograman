@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Balikkan Kata</title>
+</head>
+<body>
+  <input type="text" id="inputKata" placeholder="Masukkan kata">
+  <button onclick="balikkan()">Balikkan</button>
+
+  <h2>Hasil:</h2>
+  <p id="hasil"></p>
+
+  <script>
+    function balikkan() {
+      let kata = document.getElementById("inputKata").value;
+      let hasil = kata.split("").reverse().join("");
+      document.getElementById("hasil").textContent = hasil;
+    }
+  </script>
+</body>
+</html>
