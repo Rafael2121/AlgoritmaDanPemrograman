@@ -3,23 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulasi Antrian Loket</title>
+  <title>Sistem Antrian Modern</title>
   <link rel="stylesheet" href="uhuy.css">
 </head>
 <body>
+  <header>
+    <h2> Selamat Datang di Sistem Antrian </h2>
+    <div id="clock">00:00:00</div>
+  </header>
+
   <div class="container">
-    <h1>Simulasi Antrian Loket</h1>
+    <h1>💠 Antrian Loket 💠</h1>
 
     <input type="text" id="namaInput" placeholder="Masukkan Nama Anda">
-    <button onclick="tambahAntrian()">Tambah Antrian</button>
-    <button onclick="layaniAntrian()">Layani Antrian</button>
+    <button onclick="tambahAntrian()">Tambah</button>
+    <button onclick="layaniAntrian()">Layani</button>
+    <button onclick="resetAntrian()">Reset</button>
 
-    <h3>Daftar Antrian:</h3>
-    <div id="daftarAntrian">Belum ada antrian</div>
+    <div class="info">
+      <p><b>Jumlah Antrian:</b> <span id="jumlahAntrian">0</span></p>
+    </div>
 
-    <h3>Status:</h3>
-    <div id="status"></div>
+    <h3> Daftar Antrian</h3>
+    <div id="daftarAntrian" class="list">Belum ada antrian</div>
+
+    <h3> Status</h3>
+    <div id="status" class="status"></div>
+
+    <h3> Riwayat Selesai</h3>
+    <div id="riwayat" class="list">Belum ada</div>
   </div>
+
   <script src="woi.js"></script>
 </body>
 </html>
