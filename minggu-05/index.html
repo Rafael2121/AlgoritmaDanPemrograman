@@ -2,22 +2,29 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visualisasi Binary Search</title>
+  <title>Pencarian Produk Supermarket</title>
   <link rel="stylesheet" href="senang.css">
 </head>
 <body>
+  <header>
+    Sistem Pencarian Produk Supermarket
+    <div id="clock"></div>
+  </header>
+
   <div class="container">
-    <h1>🔍 Visualisasi Binary Search</h1>
-    <p>Masukkan kata untuk dicari dalam kamus (array sudah terurut):</p>
+    <h1>Pencarian Produk (Barcode)</h1>
+    <div class="input-area">
+      <input type="number" id="barcodeInput" placeholder="Masukkan barcode...">
+      <button onclick="cariLinear()">Linear Search</button>
+      <button onclick="cariBinary()">Binary Search</button>
+      <button onclick="bandingkan()">Bandingkan Sekaligus</button>
+    </div>
 
-    <input type="text" id="kataInput" placeholder="Contoh: banana">
-    <button onclick="cariKata()">Cari</button>
-
-    <div class="array-container" id="arrayContainer"></div>
-    <div class="result" id="hasil"></div>
+    <div id="arrayContainer" class="array"></div>
+    <div id="hasil" class="hasil"></div>
   </div>
 
   <script src="senang.js"></script>
 </body>
 </html>
+
