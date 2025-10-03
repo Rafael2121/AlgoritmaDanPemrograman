@@ -1,0 +1,102 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* biru tua elegan */
+  margin: 0;
+  padding: 0;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+/* Header */
+header {
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  color: #ffd700; /* emas */
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ffd700;
+  border-bottom: 2px solid #ffd700;
+  box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+}
+
+/* Container */
+.container {
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(10,10,30,0.9);
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 0 20px rgba(255,215,0,0.3);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+input {
+  padding: 12px;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  width: 70%;
+  margin-bottom: 15px;
+  background: #111;
+  color: #fff;
+  outline: none;
+  text-align: center;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffd700, #ff8c00); /* emas → oranye */
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,215,0,0.7);
+}
+
+/* Hasil */
+#hasil {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  background: rgba(255,215,0,0.1);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,215,0,0.3);
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  padding: 15px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes showResult {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
