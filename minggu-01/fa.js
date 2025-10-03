@@ -29,9 +29,9 @@
     hasil.textContent = teks;
     hasil.style.color = warna;
 
-    // restart animasi
+    
     hasil.style.animation = "none";
-    hasil.offsetHeight; // trigger reflow
+    hasil.offsetHeight;
     hasil.style.animation = "showResult 0.6s forwards";
   }
 })();
