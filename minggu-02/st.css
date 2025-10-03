@@ -1,0 +1,94 @@
+/* Gaya umum */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  margin: 0;
+  padding: 0;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+/* Header */
+header {
+  padding: 20px;
+  background: rgba(0,0,0,0.7);
+  color: #00eaff;
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00eaff;
+  border-bottom: 2px solid #00eaff;
+  box-shadow: 0 4px 15px rgba(0,255,255,0.3);
+}
+
+/* Container */
+.container {
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(20,20,40,0.95);
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+input {
+  padding: 12px;
+  border: 2px solid #00eaff;
+  border-radius: 8px;
+  width: 70%;
+  margin-bottom: 15px;
+  background: #111;
+  color: #fff;
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00eaff, #ff00ff);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,0,255,0.7);
+}
+
+/* Animasi untuk hasil */
+#hasil {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: lime;
+  text-shadow: 0 0 8px limegreen;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: showResult 0.6s forwards;
+}
+
+/* Animasi fadeIn */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animasi hasil */
+@keyframes showResult {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  padding: 15px;
+  font-size: 14px;
+  color: #aaa;
+}

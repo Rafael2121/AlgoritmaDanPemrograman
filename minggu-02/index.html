@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Balikkan Kata</title>
+  <link rel="stylesheet" href="st.css">
 </head>
 <body>
-  <input type="text" id="inputKata" placeholder="Masukkan kata">
-  <button onclick="balikkan()">Balikkan</button>
+  <header>
+    <h1>✨ Balikkan Kata ✨</h1>
+  </header>
 
-  <h2>Hasil:</h2>
-  <p id="hasil"></p>
+  <div class="container">
+    <input type="text" id="inputKata" placeholder="Masukkan kata di sini...">
+    <button onclick="balikkan()">🔄 Balikkan</button>
 
-  <script>
-    function balikkan() {
-      let kata = document.getElementById("inputKata").value;
-      let hasil = kata.split("").reverse().join("");
-      document.getElementById("hasil").textContent = hasil;
-    }
-  </script>
-</body>//
+    <h2>Hasil:</h2>
+    <p id="hasil"></p>
+  </div>
+
+  <footer>
+    <p>🚀 Dibuat dengan ❤ menggunakan HTML, CSS, dan JavaScript</p>
+  </footer>
+
+  <script src="sc.js"></script>
+</body>
 </html>
