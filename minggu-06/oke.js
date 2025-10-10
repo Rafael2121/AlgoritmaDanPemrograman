@@ -14,10 +14,14 @@ const hasilBox = document.getElementById("hasil");
 
 function tampilkanData(arr) {
   container.innerHTML = "";
-  arr.forEach(mhs => {
+  arr.forEach((mhs, i) => {
     const div = document.createElement("div");
     div.classList.add("box");
-    div.innerHTML = `<span class="nama">${mhs.nama}</span><span class="nilai">${mhs.nilai}</span>`;
+    div.style.setProperty("--pos", i);
+    div.innerHTML = `
+      <span class="nama">${mhs.nama}</span>
+      <span class="nilai">${mhs.nilai}</span>
+    `;
     container.appendChild(div);
   });
 }
@@ -40,29 +44,45 @@ async function bubbleSort(arr, ascending = true) {
 
       boxA.classList.add("active");
       boxB.classList.add("active");
-      await sleep(400);
+
+      await sleep(500);
 
       const condition = ascending
         ? arr[j].nilai > arr[j + 1].nilai
         : arr[j].nilai < arr[j + 1].nilai;
 
       if (condition) {
-        // Tukar elemen
+      
+        boxA.style.transform = "translateX(120px)";
+        boxB.style.transform = "translateX(-120px)";
+        boxA.classList.add("swap");
+        boxB.classList.add("swap");
+        await sleep(600);
+
+        
         [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+
+        
         tampilkanData(arr);
-        await sleep(500);
+        await sleep(300);
         swapped = true;
       }
 
       boxA.classList.remove("active");
       boxB.classList.remove("active");
+      boxA.style.transform = "translateX(0)";
+      boxB.style.transform = "translateX(0)";
     }
 
     if (!swapped) break;
   }
 
-  const allBoxes = boxes();
-  allBoxes.forEach(b => b.classList.add("sorted"));
+  const finalBoxes = boxes();
+  finalBoxes.forEach((b, index) => {
+    setTimeout(() => {
+      b.classList.add("sorted");
+    }, index * 150);
+  });
 
   hasilBox.textContent = ascending
     ? "✅ Data berhasil diurutkan dari TERKECIL ke TERBESAR!"
@@ -80,3 +100,4 @@ document.getElementById("btnDesc").addEventListener("click", () => {
 });
 
 tampilkanData(mahasiswa);
+
